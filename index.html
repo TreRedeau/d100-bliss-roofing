@@ -1,132 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Bliss Roofing — Free Roof Inspection Portland</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0A0A0A;color:#F0F0F0;font-family:'Inter',sans-serif;}
-a{color:inherit;text-decoration:none;}
-.btn{display:inline-block;background:#c36;color:white;font-weight:800;font-size:15px;padding:16px 32px;border-radius:8px;cursor:pointer;border:none;transition:opacity .2s;}
-.btn:hover{opacity:.88;}
-.btn-outline{background:transparent;border:2px solid #c36;color:#c36;}
-@media(max-width:680px){.hero-flex{flex-direction:column!important;} .nav-phone{display:none;}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bliss Roofing | Free Roofing Estimates in Portland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0F1115;
+      --panel:#151923;
+      --panel-2:#11151d;
+      --text:#e9eef5;
+      --muted:#a8b0bd;
+      --primary:#ec008c; /* Bliss Roofing primary */
+      --secondary:#00aeef; /* Bliss Roofing secondary */
+      --accent:#f3f6fb;
+      --success:#3ddc97;
+      --shadow:0 14px 40px rgba(0,0,0,0.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 70% -10%, rgba(0,174,239,0.18), transparent 55%),
+                 radial-gradient(900px 500px at 10% 0%, rgba(236,0,140,0.18), transparent 60%),
+                 var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1150px;margin:0 auto;padding:0 22px}
+
+    /* Sticky Nav */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:rgba(10,10,10,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:44px; width:auto; background:#fff; padding:6px 10px; border-radius:10px}
+    .nav-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .phone-pill{
+      padding:8px 14px;border:1px solid rgba(255,255,255,0.18);
+      border-radius:999px;color:#fff;font-weight:600;letter-spacing:0.2px
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 18px;border-radius:999px;font-weight:700;border:1px solid transparent;
+      transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
+      cursor:pointer
+    }
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 12px 24px rgba(236,0,140,0.25)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-outline{border-color:rgba(255,255,255,0.25);color:#fff;background:transparent}
+
+    /* Hero */
+    .hero{padding:70px 0 50px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center}
+    .eyebrow{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:6px 12px;border-radius:999px;background:rgba(0,174,239,0.16);
+      color:#d7f2ff;font-weight:600;font-size:13px;letter-spacing:.4px
+    }
+    .hero h1{font-size:46px;line-height:1.08;margin:14px 0 12px}
+    .hero h1 span{color:var(--secondary)}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+    .hero-card{
+      background:linear-gradient(180deg, rgba(21,25,35,0.95), rgba(17,21,29,0.95));
+      border:1px solid rgba(255,255,255,0.08);
+      padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)
+    }
+    .hero-card h3{margin:0 0 10px}
+    .hero-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+    .hero-list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);margin-top:6px}
+
+    /* Trust bar */
+    .trust{
+      margin:24px 0 10px;padding:16px;border-radius:14px;
+      background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)
+    }
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
+    .trust-item{font-weight:600;color:#e7ecf5;font-size:14px}
+
+    /* Sections */
+    section{padding:60px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px}
+    .section-title h2{margin:0;font-size:30px}
+    .section-title p{margin:0;color:var(--muted)}
+
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:var(--panel);
+      border:1px solid rgba(255,255,255,0.07);
+      padding:20px;border-radius:16px;min-height:130px
+    }
+    .card h4{margin:0 0 8px}
+    .pill{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:999px;font-size:12px;background:rgba(0,174,239,0.16);color:#cfefff}
+
+    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .review{
+      background:var(--panel-2);border:1px solid rgba(255,255,255,0.07);
+      padding:22px;border-radius:16px
+    }
+    .stars{color:#ffd166;margin-bottom:8px;letter-spacing:2px}
+    .review p{margin:0 0 10px;color:#dce3ef}
+    .review small{color:var(--muted)}
+
+    /* Form */
+    .form-wrap{
+      background:linear-gradient(180deg, rgba(236,0,140,0.08), rgba(0,174,239,0.06));
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:18px;padding:26px
+    }
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    input, textarea{
+      width:100%;padding:12px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);
+      background:#0b0e14;color:#fff;font-size:14px
+    }
+    textarea{min-height:120px;grid-column:1/-1;resize:vertical}
+    .form-actions{grid-column:1/-1;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .form-note{color:var(--muted);font-size:12px}
+    .thank-you{
+      display:none;margin-top:14px;color:var(--success);font-weight:700
+    }
+
+    /* Footer */
+    footer{padding:26px 0;border-top:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .card-grid{grid-template-columns:1fr 1fr}
+      .trust-grid{grid-template-columns:repeat(2,1fr)}
+      .reviews{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .nav-inner{flex-direction:column;align-items:flex-start}
+      .brand img{height:38px}
+      .hero h1{font-size:36px}
+      .card-grid{grid-template-columns:1fr}
+      .trust-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav style="position:sticky;top:0;z-index:100;background:rgba(10,10,10,.95);backdrop-filter:blur(8px);border-bottom:1px solid #1A1A1A;padding:0 24px;">
-  <div style="max-width:1100px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;">
-    <img src="https://blissroofing.com/wp-content/uploads/2024/08/logo-bliss.png" alt="Bliss Roofing" style="height:48px;max-width:200px;object-fit:contain;" onerror="this.style.display='none'" />
-    <div style="display:flex;align-items:center;gap:16px;">
-      <a href="tel:9713165569" class="nav-phone" style="font-size:14px;font-weight:700;color:#c36;">971-316-5569</a>
-      <a href="#contact" class="btn" style="padding:10px 20px;font-size:13px;">Get Free Estimate</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section style="background:linear-gradient(135deg,#0A0A0A 0%,#111 50%,#0A0A0A 100%);padding:80px 24px 64px;border-bottom:1px solid #1A1A1A;">
-  <div style="max-width:1100px;margin:0 auto;" class="hero-flex" style="display:flex;gap:48px;align-items:center;">
-    <div style="flex:1;min-width:0;">
-      <div style="display:inline-block;background:#1A1A1A;border:1px solid #2A2A2A;border-radius:20px;padding:6px 14px;font-size:11px;font-weight:700;color:#c36;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;">Portland, OR · Licensed &amp; Insured</div>
-      <h1 style="font-size:clamp(32px,5vw,58px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px;">Your roof protects<br/>everything you've built.<br/><span style="color:#c36;">Don't risk it.</span></h1>
-      <p style="font-size:16px;color:#AAA;line-height:1.7;margin-bottom:32px;max-width:520px;">Bliss Roofing has spent over 50 years building our business, which has led us to become some of the most knowledgeable roofers in Portland and beyond.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
-        <a href="#contact" class="btn" style="font-size:16px;padding:18px 36px;">Get My Free Inspection →</a>
-        <a href="tel:971-316-5569" class="btn btn-outline" style="font-size:16px;padding:18px 28px;">971-316-5569</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="https://blissroofing.com/wp-content/uploads/2024/08/logo-bliss.png" alt="Bliss Roofing Logo">
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:20px;">
-        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#AAA;"><span style="color:#c36;font-size:18px;">✓</span> Licensed &amp; Insured</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#AAA;"><span style="color:#c36;font-size:18px;">✓</span> Same-Day Estimates</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#AAA;"><span style="color:#c36;font-size:18px;">✓</span> 5-Year Guarantee</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#AAA;"><span style="color:#c36;font-size:18px;">✓</span> Portland Local</div>
+      <div class="nav-actions">
+        <a class="phone-pill" href="tel:9713165569">Call: 971-316-5569</a>
+        <a class="btn btn-primary" href="#estimate">Get Free Estimate</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- TRUST BAR -->
-<section style="background:#111;border-bottom:1px solid #1A1A1A;padding:20px 24px;">
-  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:32px;">
-    <div style="font-size:13px;font-weight:700;color:#AAA;display:flex;align-items:center;gap:8px;"><span style="color:#c36;">●</span>200+ Portland Roofs Completed</div> <div style="font-size:13px;font-weight:700;color:#AAA;display:flex;align-items:center;gap:8px;"><span style="color:#c36;">●</span>Free Written Estimates</div> <div style="font-size:13px;font-weight:700;color:#AAA;display:flex;align-items:center;gap:8px;"><span style="color:#c36;">●</span>No Pressure, No Obligation</div> <div style="font-size:13px;font-weight:700;color:#AAA;display:flex;align-items:center;gap:8px;"><span style="color:#c36;">●</span>Response Within 1 Hour</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section style="padding:72px 24px;border-bottom:1px solid #1A1A1A;">
-  <div style="max-width:800px;margin:0 auto;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;color:#c36;text-transform:uppercase;margin-bottom:10px;">What We Do</div>
-    <h2 style="font-size:clamp(24px,4vw,40px);font-weight:900;letter-spacing:-.02em;margin-bottom:36px;">Our Services</h2>
-    <div style="display:flex;flex-direction:column;gap:10px;"><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">Home</div><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">About Us
-
-Our Company
-Careers
-Financing
-Staff
-FAQ
-Portfolio
-Reviews
-Media
-Credentials
-Referral
-Blog</div><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">Our Company</div><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">Careers</div><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">Financing</div><div style="background:#1A1A1A;border-left:3px solid #c36;padding:14px 20px;border-radius:0 8px 8px 0;font-size:14px;font-weight:600;color:#F0F0F0;">Staff</div></div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section style="padding:72px 24px;background:#080808;border-bottom:1px solid #1A1A1A;">
-  <div style="max-width:800px;margin:0 auto;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;color:#c36;text-transform:uppercase;margin-bottom:10px;">What Homeowners Say</div>
-    <h2 style="font-size:clamp(24px,4vw,40px);font-weight:900;letter-spacing:-.02em;margin-bottom:36px;">5-Star Reviews</h2>
-    <div style="display:flex;flex-direction:column;gap:16px;">
-        <div style="background:#111;border:1px solid #2A2A2A;border-radius:12px;padding:24px;">
-            <div style="color:#c36;font-size:18px;margin-bottom:8px;">★★★★★</div>
-            <div style="font-size:14px;color:#CCC;line-height:1.7;font-style:italic;">"They showed up on time, finished ahead of schedule, and the price was exactly what they quoted. Best contractor experience I've had in Portland."</div>
-            <div style="font-size:12px;color:#666;margin-top:10px;">— Portland homeowner via Google</div>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Serving the Portland Metro & Bend area since 1969</span>
+        <h1>Portland's Trusted Roofing Company — <span>Free Inspection, No Obligation</span></h1>
+        <p>A Top-Tier Roofing Company in Portland & Bend. Your preferred roofer since 1969 with fast, no-pressure estimates and craftsmanship that lasts.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#estimate">Schedule Free Estimate</a>
+          <a class="btn btn-outline" href="tel:9713165569">Call 971-316-5569</a>
         </div>
-        <div style="background:#111;border:1px solid #2A2A2A;border-radius:12px;padding:24px;">
-            <div style="color:#c36;font-size:18px;margin-bottom:8px;">★★★★★</div>
-            <div style="font-size:14px;color:#CCC;line-height:1.7;font-style:italic;">"Found a leak during the rainy season. They came out same day and had it fixed by afternoon. Absolutely recommend."</div>
-            <div style="font-size:12px;color:#666;margin-top:10px;">— Google Review</div>
-        </div></div>
-  </div>
-</section>
+      </div>
+      <div class="hero-card">
+        <h3>Why Homeowners Choose Bliss Roofing</h3>
+        <p style="color:var(--muted);margin:0">Locally trusted, responsive crews, and a clear, honest estimate every time.</p>
+        <ul class="hero-list">
+          <li><span class="dot"></span>Re-Roofing, repairs, inspections, and commercial services</li>
+          <li><span class="dot"></span>Same-day estimates available for urgent needs</li>
+          <li><span class="dot"></span>Licensed, insured, and warranty-backed workmanship</li>
+        </ul>
+      </div>
+    </div>
 
-<!-- CONTACT FORM -->
-<section id="contact" style="padding:80px 24px;">
-  <div style="max-width:600px;margin:0 auto;text-align:center;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;color:#c36;text-transform:uppercase;margin-bottom:10px;">Get Started</div>
-    <h2 style="font-size:clamp(26px,4vw,44px);font-weight:900;letter-spacing:-.02em;margin-bottom:12px;">Ready for Your Free Inspection?</h2>
-    <p style="font-size:15px;color:#888;margin-bottom:36px;line-height:1.7;">No obligation. No pressure. Just an honest assessment of your roof from a licensed Oregon contractor.</p>
-    <form style="display:flex;flex-direction:column;gap:14px;text-align:left;" onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Your Name" required style="background:#111;border:1px solid #2A2A2A;border-radius:8px;padding:14px 16px;font-size:15px;color:white;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#c36'" onblur="this.style.borderColor='#2A2A2A'"/>
-      <input type="tel" placeholder="Phone Number" required style="background:#111;border:1px solid #2A2A2A;border-radius:8px;padding:14px 16px;font-size:15px;color:white;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#c36'" onblur="this.style.borderColor='#2A2A2A'"/>
-      <input type="email" placeholder="Email Address" style="background:#111;border:1px solid #2A2A2A;border-radius:8px;padding:14px 16px;font-size:15px;color:white;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#c36'" onblur="this.style.borderColor='#2A2A2A'"/>
-      <input type="text" placeholder="Property Address" style="background:#111;border:1px solid #2A2A2A;border-radius:8px;padding:14px 16px;font-size:15px;color:white;outline:none;font-family:inherit;" onfocus="this.style.borderColor='#c36'" onblur="this.style.borderColor='#2A2A2A'"/>
-      <textarea placeholder="Describe your roofing concern (optional)" rows="3" style="background:#111;border:1px solid #2A2A2A;border-radius:8px;padding:14px 16px;font-size:15px;color:white;outline:none;font-family:inherit;resize:vertical;" onfocus="this.style.borderColor='#c36'" onblur="this.style.borderColor='#2A2A2A'"></textarea>
-      <button type="submit" class="btn" style="width:100%;font-size:16px;padding:18px;">Get My Free Estimate →</button>
-      <div style="font-size:12px;color:#555;text-align:center;">We respond within 1 hour during business hours.</div>
-    </form>
-    <div id="success" style="display:none;background:#0D2010;border:1px solid #1A4020;border-radius:12px;padding:24px;margin-top:20px;color:#34D399;font-weight:700;font-size:15px;">✓ Got it! We'll be in touch within the hour.</div>
-  </div>
-</section>
+    <div class="container trust">
+      <div class="trust-grid">
+        <div class="trust-item">Licensed & Insured</div>
+        <div class="trust-item">Same-Day Estimates</div>
+        <div class="trust-item">5-Year Guarantee</div>
+        <div class="trust-item">Portland Local</div>
+      </div>
+    </div>
+  </header>
 
-<!-- FOOTER -->
-<footer style="background:#080808;border-top:1px solid #1A1A1A;padding:32px 24px;text-align:center;">
-  <div style="font-size:13px;color:#555;">Bliss Roofing · Portland, OR · 971-316-5569</div>
-  <div style="font-size:11px;color:#333;margin-top:8px;"><a href="https://www.blissroofing.com/" style="color:#333;">https://www.blissroofing.com/</a></div>
-</footer>
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Our Roofing Services</h2>
+          <p>Full-service roofing for residential and commercial projects.</p>
+        </div>
+        <a class="btn btn-outline" href="#estimate">Get a Quote</a>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Re-Roofing</h4>
+          <p>Complete replacement with premium materials and clean, efficient installs.</p>
+          <span class="pill">Most Popular</span>
+        </div>
+        <div class="card">
+          <h4>Roof Repairs</h4>
+          <p>Leak detection, flashing, vents, and storm damage repair done right.</p>
+        </div>
+        <div class="card">
+          <h4>New Construction</h4>
+          <p>Builder-ready installs with timelines that stay on schedule.</p>
+        </div>
+        <div class="card">
+          <h4>Inspections</h4>
+          <p>Detailed roof inspections and clear recommendations.</p>
+        </div>
+        <div class="card">
+          <h4>Commercial Services</h4>
+          <p>Flat and low-slope systems with professional project management.</p>
+        </div>
+        <div class="card">
+          <h4>Free Estimates</h4>
+          <p>Know the cost upfront with a no-pressure, no-obligation estimate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-function handleSubmit(e) {
-  e.preventDefault();
-  document.querySelector('form').style.display = 'none';
-  document.getElementById('success').style.display = 'block';
-}
-</script>
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Portland Homeowner Reviews</h2>
+          <p>Recent feedback from local homeowners.</p>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"Bliss Roofing gave us a clear estimate the same day and finished our re-roof ahead of schedule. The crew was respectful and left our yard spotless."</p>
+          <small>— Sarah M., Sellwood (Google Review)</small>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"We had a persistent leak and they tracked it down fast. Honest, professional, and the repair looks great. Highly recommend for Portland homes."</p>
+          <small>— James R., Beaverton (Google Review)</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="estimate">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Get Your Free Estimate</h2>
+          <p>Tell us about your project and we will call you back quickly.</p>
+        </div>
+        <a class="phone-pill" href="tel:9713165569">971-316-5569</a>
+      </div>
+      <div class="form-wrap">
+        <form id="leadForm">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="address" placeholder="Project Address" required>
+          <textarea name="description" placeholder="Project Description" required></textarea>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+            <span class="form-note">By submitting, you agree to be contacted by Bliss Roofing.</span>
+          </div>
+          <div class="thank-you" id="thankYou">Thanks! Your request has been received. We will reach out shortly.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Bliss Roofing · <a href="tel:9713165569">971-316-5569</a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const thankYou = document.getElementById('thankYou');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      thankYou.style.display = 'block';
+      thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
 </body>
 </html>
