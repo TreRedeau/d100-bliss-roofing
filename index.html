@@ -56,29 +56,20 @@ h1{font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;letter-spacing
 .cost-body{font-size:13px;color:var(--muted);line-height:1.7;}
 .cost-body strong{color:var(--accent);}
 
-/* PAGE COMPARISON */
-.compare-section{padding:56px 24px;border-bottom:1px solid var(--border);background:#050508;}
-.compare-inner{max-width:900px;margin:0 auto;}
-.toggle-bar{display:flex;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:4px;margin-bottom:24px;max-width:420px;}
-.toggle-btn{flex:1;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:700;text-align:center;cursor:pointer;transition:all .2s;color:var(--muted);}
-.toggle-btn.active{background:var(--accent);color:white;box-shadow:0 4px 16px rgba(236,0,140,.3);}
-.compare-frame{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);}
-.frame-bar{background:#1A1A2E;padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
-.dot{width:10px;height:10px;border-radius:50%;}
-.url-pill{background:#0F0F1A;border:1px solid var(--border);border-radius:4px;padding:4px 12px;font-size:11px;color:var(--muted);flex:1;max-width:400px;}
-.compare-content{padding:24px;}
-.their-site{display:block;}
-.our-page{display:none;}
-
-/* why better */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
-.why-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
-.why-card.bad{border-color:#3A1010;background:#0D0808;}
-.why-card.good{border-color:#1A3A0A;background:#080D05;}
-.why-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
-.why-label.red{color:#EF4444;}
-.why-label.green{color:#34D399;}
-.why-text{font-size:13px;color:#CCC;line-height:1.6;}
+/* AUDIT SECTION */
+.audit-section{padding:56px 24px;border-bottom:1px solid var(--border);background:#050508;}
+.audit-inner{max-width:760px;margin:0 auto;}
+.audit-site-link{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--muted);}
+.audit-site-link a{color:var(--accent2);font-weight:600;}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.audit-card{border-radius:12px;padding:20px;}
+.audit-card.issue{background:#0D0808;border:1px solid #3A1010;}
+.audit-card.fix{background:#080D05;border:1px solid #1A3A0A;}
+.audit-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
+.audit-label.red{color:#EF4444;}
+.audit-label.green{color:#34D399;}
+.audit-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.audit-body{font-size:13px;color:#AAA;line-height:1.6;}
 
 /* DELIVERABLES */
 .deliver-section{padding:56px 24px;border-bottom:1px solid var(--border);}
@@ -183,110 +174,62 @@ footer{padding:28px 24px;text-align:center;font-size:12px;color:var(--muted);bor
   </div>
 </section>
 
-<!-- PAGE COMPARISON -->
-<section class="compare-section">
-  <div class="compare-inner">
-    <div class="section-eyebrow">The Deliverable</div>
-    <h2 class="section-title" style="margin-bottom:8px;">We built you a landing page.<br/>Here's how it compares.</h2>
-    <p class="section-sub" style="margin-bottom:24px;">Toggle between your current site and what we built. The difference is what converts a homeowner from "browsing" to "calling."</p>
+<!-- SITE AUDIT -->
+<section class="audit-section">
+  <div class="audit-inner">
+    <div class="section-eyebrow">Site Audit</div>
+    <h2 class="section-title" style="margin-bottom:8px;">We looked at blissroofing.com.<br/>Here's what we found.</h2>
+    <p class="section-sub" style="margin-bottom:20px;">Four specific things on your current site that are costing you leads — and what we fixed in the page we built.</p>
 
-    <div class="toggle-bar">
-      <div class="toggle-btn active" onclick="showView('theirs',this)">Their current site</div>
-      <div class="toggle-btn" onclick="showView('ours',this)">Page we built</div>
+    <div class="audit-site-link">
+      <span style="color:var(--muted);">Audited:</span>
+      <a href="https://www.blissroofing.com" target="_blank">blissroofing.com ↗</a>
+      <span style="margin-left:auto;font-size:11px;">Checked March 2026</span>
     </div>
 
-    <div class="compare-frame">
-      <div class="frame-bar">
-        <div class="dot" style="background:#FF5F57;"></div>
-        <div class="dot" style="background:#FEBC2E;"></div>
-        <div class="dot" style="background:#28C840;"></div>
-        <div class="url-pill" id="url-display">blissroofing.com</div>
+    <div class="audit-grid">
+      <div class="audit-card issue">
+        <div class="audit-label red">❌ Found on your site</div>
+        <div class="audit-title">No phone number visible above the fold</div>
+        <div class="audit-body">Your number is buried. A homeowner on mobile who wants to call has to scroll to find it. Most won't. They'll call whoever's number is easiest to tap.</div>
       </div>
-      <div class="compare-content">
-        <!-- THEIR SITE -->
-        <div id="view-theirs">
-          <div style="background:#F5F5F5;border-radius:8px;padding:20px;margin-bottom:16px;">
-            <div style="background:#CC3366;height:120px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;margin-bottom:12px;">BLISS ROOFING — EST. 1969</div>
-            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:12px;">
-              <div style="background:#eee;height:32px;border-radius:4px;"></div>
-              <div style="background:#eee;height:32px;border-radius:4px;"></div>
-              <div style="background:#eee;height:32px;border-radius:4px;"></div>
-              <div style="background:#eee;height:32px;border-radius:4px;"></div>
-              <div style="background:#CC3366;height:32px;border-radius:4px;"></div>
-            </div>
-            <div style="background:#ddd;height:180px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Full-page hero image slider</div>
-            <div style="margin-top:12px;font-size:13px;color:#555;line-height:1.8;">
-              <p style="font-size:16px;font-weight:700;color:#333;margin-bottom:6px;">Portland's Premier Roofing Experts</p>
-              Serving the Portland Metro area for over 50 years. We offer residential and commercial roofing services...
-              <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
-                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Learn More</span>
-                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Our Services</span>
-                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Contact Us</span>
-              </div>
-            </div>
-          </div>
-          <div class="why-grid">
-            <div class="why-card bad">
-              <div class="why-label red">❌ Problem</div>
-              <div class="why-text">No phone number above the fold. A homeowner has to scroll or hunt for how to call you.</div>
-            </div>
-            <div class="why-card bad">
-              <div class="why-label red">❌ Problem</div>
-              <div class="why-text">3 CTAs competing ("Learn More", "Services", "Contact") — splits attention and reduces action.</div>
-            </div>
-            <div class="why-card bad">
-              <div class="why-label red">❌ Problem</div>
-              <div class="why-text">No lead capture form. Visitors who don't call are gone forever — no way to follow up.</div>
-            </div>
-            <div class="why-card bad">
-              <div class="why-label red">❌ Problem</div>
-              <div class="why-text">"Learn More" is weak. It doesn't move someone toward scheduling or calling.</div>
-            </div>
-          </div>
-        </div>
+      <div class="audit-card fix">
+        <div class="audit-label green">✓ What we built</div>
+        <div class="audit-title">Phone pinned in the nav on every screen</div>
+        <div class="audit-body">971-316-5569 is visible the moment the page loads — on desktop and mobile. One tap. No scrolling. No hunting.</div>
+      </div>
 
-        <!-- OUR PAGE -->
-        <div id="view-ours" style="display:none;">
-          <div style="background:#0A0A0A;border-radius:8px;padding:20px;margin-bottom:16px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;background:#111;padding:10px 14px;border-radius:6px;">
-              <span style="color:#ec008c;font-weight:900;font-size:14px;">Bliss Roofing</span>
-              <div style="display:flex;gap:8px;">
-                <span style="color:#00aeef;font-size:13px;font-weight:700;">971-316-5569</span>
-                <span style="background:#ec008c;color:white;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:700;">Free Estimate</span>
-              </div>
-            </div>
-            <div style="background:#111;border-radius:6px;padding:20px;margin-bottom:12px;">
-              <div style="font-size:11px;font-weight:700;color:#ec008c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Portland, OR · Licensed & Insured</div>
-              <div style="font-size:20px;font-weight:900;color:white;margin-bottom:10px;line-height:1.2;">Don't let your competitor get <span style="color:#ec008c;">700 reviews ahead.</span></div>
-              <div style="font-size:13px;color:#888;margin-bottom:14px;">Free roof inspection. No obligation. Response within 1 hour.</div>
-              <div style="background:#ec008c;color:white;padding:12px 20px;border-radius:6px;font-weight:800;text-align:center;font-size:13px;">Get My Free Inspection →</div>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
-              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Licensed</div>
-              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Same Day</div>
-              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ 5-Year Warranty</div>
-              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Local</div>
-            </div>
-          </div>
-          <div class="why-grid">
-            <div class="why-card good">
-              <div class="why-label green">✓ Fixed</div>
-              <div class="why-text">Phone number in the nav, visible on every screen. One tap to call.</div>
-            </div>
-            <div class="why-card good">
-              <div class="why-label green">✓ Fixed</div>
-              <div class="why-text">One CTA — "Get My Free Inspection." No confusion about what to do next.</div>
-            </div>
-            <div class="why-card good">
-              <div class="why-label green">✓ Fixed</div>
-              <div class="why-text">Lead form captures name, phone, email, address. Visitors who don't call today get followed up automatically.</div>
-            </div>
-            <div class="why-card good">
-              <div class="why-label green">✓ Fixed</div>
-              <div class="why-text">Headline calls out the competitor gap directly. Creates urgency without being pushy.</div>
-            </div>
-          </div>
-        </div>
+      <div class="audit-card issue">
+        <div class="audit-label red">❌ Found on your site</div>
+        <div class="audit-title">No lead capture form anywhere</div>
+        <div class="audit-body">Your site has a contact page but no embedded form on the homepage. Visitors who don't call in the moment are gone. No way to follow up with them later.</div>
+      </div>
+      <div class="audit-card fix">
+        <div class="audit-label green">✓ What we built</div>
+        <div class="audit-title">Lead form in the hero — name, phone, email, address</div>
+        <div class="audit-body">Captures everyone who lands on the page, whether they call or not. Every submission goes into an automated follow-up sequence so no lead goes cold.</div>
+      </div>
+
+      <div class="audit-card issue">
+        <div class="audit-label red">❌ Found on your site</div>
+        <div class="audit-title">Multiple competing CTAs split attention</div>
+        <div class="audit-body">Your homepage has "Learn More," "Our Services," "Get a Quote," and "Contact Us" all fighting for the same click. When everything is a priority, nothing is.</div>
+      </div>
+      <div class="audit-card fix">
+        <div class="audit-label green">✓ What we built</div>
+        <div class="audit-title">One CTA — "Get My Free Inspection"</div>
+        <div class="audit-body">Every element on the page points to one action. Cleaner pages convert better. The data on this is consistent across every industry.</div>
+      </div>
+
+      <div class="audit-card issue">
+        <div class="audit-label red">❌ Found on your site</div>
+        <div class="audit-title">Nothing on the page creates urgency</div>
+        <div class="audit-body">Your site explains what you do well. It doesn't give the homeowner a reason to act today versus next week. "We've been around since 1969" builds trust — it doesn't move people off the fence.</div>
+      </div>
+      <div class="audit-card fix">
+        <div class="audit-label green">✓ What we built</div>
+        <div class="audit-title">Real competitive data creates real urgency</div>
+        <div class="audit-body">Showing a Portland homeowner that Interstate has 700 reviews and you have 61 — and that this is why you're not showing up in their search — is honest and moves people to act.</div>
       </div>
     </div>
   </div>
@@ -378,13 +321,8 @@ footer{padding:28px 24px;text-align:center;font-size:12px;color:var(--muted);bor
 </footer>
 
 <script>
-function showView(view, btn) {
-  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('view-theirs').style.display = view === 'theirs' ? 'block' : 'none';
-  document.getElementById('view-ours').style.display = view === 'ours' ? 'block' : 'none';
-  document.getElementById('url-display').textContent = view === 'theirs' ? 'blissroofing.com' : 'treredeau.github.io/d100-bliss-roofing';
-}
+// Page loaded
+console.log('Bliss Roofing — ClickNinja Dream 100 page loaded');
 </script>
 </body>
 </html>
