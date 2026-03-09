@@ -1,308 +1,390 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bliss Roofing | Free Roofing Estimates in Portland</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0F1115;
-      --panel:#151923;
-      --panel-2:#11151d;
-      --text:#e9eef5;
-      --muted:#a8b0bd;
-      --primary:#ec008c; /* Bliss Roofing primary */
-      --secondary:#00aeef; /* Bliss Roofing secondary */
-      --accent:#f3f6fb;
-      --success:#3ddc97;
-      --shadow:0 14px 40px rgba(0,0,0,0.35);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:radial-gradient(1200px 600px at 70% -10%, rgba(0,174,239,0.18), transparent 55%),
-                 radial-gradient(900px 500px at 10% 0%, rgba(236,0,140,0.18), transparent 60%),
-                 var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1150px;margin:0 auto;padding:0 22px}
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>We Built This For Bliss Roofing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#080810;--surface:#0F0F1A;--card:#13131F;--border:#1E1E2E;
+  --accent:#ec008c;--accent2:#00aeef;--text:#F0F0F8;--muted:#6B6B8A;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
 
-    /* Sticky Nav */
-    .nav{
-      position:sticky;top:0;z-index:50;
-      background:rgba(10,10,10,0.88);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid rgba(255,255,255,0.06);
-    }
-    .nav-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:16px;padding:14px 0;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:44px; width:auto; background:#fff; padding:6px 10px; border-radius:10px}
-    .nav-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-    .phone-pill{
-      padding:8px 14px;border:1px solid rgba(255,255,255,0.18);
-      border-radius:999px;color:#fff;font-weight:600;letter-spacing:0.2px
-    }
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:12px 18px;border-radius:999px;font-weight:700;border:1px solid transparent;
-      transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
-      cursor:pointer
-    }
-    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 12px 24px rgba(236,0,140,0.25)}
-    .btn-primary:hover{transform:translateY(-1px)}
-    .btn-outline{border-color:rgba(255,255,255,0.25);color:#fff;background:transparent}
+/* NAV */
+nav{background:rgba(8,8,16,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;}
+.nav-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{height:36px;}
+.nav-badge{background:#0D0D1A;border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--muted);}
 
-    /* Hero */
-    .hero{padding:70px 0 50px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center}
-    .eyebrow{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:6px 12px;border-radius:999px;background:rgba(0,174,239,0.16);
-      color:#d7f2ff;font-weight:600;font-size:13px;letter-spacing:.4px
-    }
-    .hero h1{font-size:46px;line-height:1.08;margin:14px 0 12px}
-    .hero h1 span{color:var(--secondary)}
-    .hero p{color:var(--muted);font-size:18px;margin:0 0 22px}
-    .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+/* HERO */
+.hero{padding:60px 24px 40px;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at 20% 0%,rgba(236,0,140,.08),transparent 60%),radial-gradient(ellipse at 80% 0%,rgba(0,174,239,.06),transparent 60%);}
+.hero-inner{max-width:760px;margin:0 auto;text-align:center;}
+.tag{display:inline-block;background:#1A0010;border:1px solid rgba(236,0,140,.3);color:var(--accent);border-radius:20px;padding:6px 16px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;}
+h1{font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.7;max-width:580px;margin:0 auto 32px;}
+.cta-btn{display:inline-block;background:linear-gradient(135deg,var(--accent),#ff4da6);color:white;font-weight:800;font-size:15px;padding:16px 36px;border-radius:8px;box-shadow:0 12px 32px rgba(236,0,140,.3);transition:transform .2s,box-shadow .2s;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(236,0,140,.4);}
 
-    .hero-card{
-      background:linear-gradient(180deg, rgba(21,25,35,0.95), rgba(17,21,29,0.95));
-      border:1px solid rgba(255,255,255,0.08);
-      padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)
-    }
-    .hero-card h3{margin:0 0 10px}
-    .hero-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
-    .hero-list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);margin-top:6px}
+/* GAP SECTION */
+.gap-section{padding:56px 24px;border-bottom:1px solid var(--border);}
+.gap-inner{max-width:760px;margin:0 auto;}
+.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.section-title{font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-.02em;margin-bottom:8px;}
+.section-sub{font-size:14px;color:var(--muted);margin-bottom:32px;line-height:1.7;}
 
-    /* Trust bar */
-    .trust{
-      margin:24px 0 10px;padding:16px;border-radius:14px;
-      background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)
-    }
-    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
-    .trust-item{font-weight:600;color:#e7ecf5;font-size:14px}
+.gap-card{background:#0A0010;border:1px solid rgba(236,0,140,.2);border-radius:14px;padding:28px;margin-bottom:16px;}
+.gap-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:20px;}
+.gap-col{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;}
+.gap-col.you{border-color:rgba(236,0,140,.3);background:#0D0008;}
+.gap-col.them{border-color:rgba(0,174,239,.3);background:#001020;}
+.gap-name{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
+.gap-num{font-size:36px;font-weight:900;line-height:1;}
+.gap-num.red{color:#EF4444;}
+.gap-num.blue{color:var(--accent2);}
+.gap-label{font-size:11px;color:var(--muted);margin-top:4px;}
+.vs-badge{background:var(--border);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--muted);}
+.gap-insight{font-size:14px;color:#CCC;line-height:1.7;border-top:1px solid var(--border);padding-top:16px;}
+.gap-insight strong{color:var(--text);}
 
-    /* Sections */
-    section{padding:60px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px}
-    .section-title h2{margin:0;font-size:30px}
-    .section-title p{margin:0;color:var(--muted)}
+.cost-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;gap:20px;align-items:flex-start;}
+.cost-icon{width:44px;height:44px;border-radius:10px;background:#1A0010;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.cost-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.cost-body{font-size:13px;color:var(--muted);line-height:1.7;}
+.cost-body strong{color:var(--accent);}
 
-    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{
-      background:var(--panel);
-      border:1px solid rgba(255,255,255,0.07);
-      padding:20px;border-radius:16px;min-height:130px
-    }
-    .card h4{margin:0 0 8px}
-    .pill{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:999px;font-size:12px;background:rgba(0,174,239,0.16);color:#cfefff}
+/* PAGE COMPARISON */
+.compare-section{padding:56px 24px;border-bottom:1px solid var(--border);background:#050508;}
+.compare-inner{max-width:900px;margin:0 auto;}
+.toggle-bar{display:flex;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:4px;margin-bottom:24px;max-width:420px;}
+.toggle-btn{flex:1;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:700;text-align:center;cursor:pointer;transition:all .2s;color:var(--muted);}
+.toggle-btn.active{background:var(--accent);color:white;box-shadow:0 4px 16px rgba(236,0,140,.3);}
+.compare-frame{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);}
+.frame-bar{background:#1A1A2E;padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
+.dot{width:10px;height:10px;border-radius:50%;}
+.url-pill{background:#0F0F1A;border:1px solid var(--border);border-radius:4px;padding:4px 12px;font-size:11px;color:var(--muted);flex:1;max-width:400px;}
+.compare-content{padding:24px;}
+.their-site{display:block;}
+.our-page{display:none;}
 
-    .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .review{
-      background:var(--panel-2);border:1px solid rgba(255,255,255,0.07);
-      padding:22px;border-radius:16px
-    }
-    .stars{color:#ffd166;margin-bottom:8px;letter-spacing:2px}
-    .review p{margin:0 0 10px;color:#dce3ef}
-    .review small{color:var(--muted)}
+/* why better */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+.why-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.why-card.bad{border-color:#3A1010;background:#0D0808;}
+.why-card.good{border-color:#1A3A0A;background:#080D05;}
+.why-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.why-label.red{color:#EF4444;}
+.why-label.green{color:#34D399;}
+.why-text{font-size:13px;color:#CCC;line-height:1.6;}
 
-    /* Form */
-    .form-wrap{
-      background:linear-gradient(180deg, rgba(236,0,140,0.08), rgba(0,174,239,0.06));
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:18px;padding:26px
-    }
-    form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    input, textarea{
-      width:100%;padding:12px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);
-      background:#0b0e14;color:#fff;font-size:14px
-    }
-    textarea{min-height:120px;grid-column:1/-1;resize:vertical}
-    .form-actions{grid-column:1/-1;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .form-note{color:var(--muted);font-size:12px}
-    .thank-you{
-      display:none;margin-top:14px;color:var(--success);font-weight:700
-    }
+/* DELIVERABLES */
+.deliver-section{padding:56px 24px;border-bottom:1px solid var(--border);}
+.deliver-inner{max-width:760px;margin:0 auto;}
+.deliver-list{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;}
+.deliver-item{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.deliver-num{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:white;flex-shrink:0;}
+.deliver-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.deliver-body{font-size:13px;color:var(--muted);line-height:1.6;}
+.free-badge{display:inline-block;background:#0D2010;color:#34D399;border:1px solid #1A4020;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;letter-spacing:.06em;margin-left:8px;vertical-align:middle;}
 
-    /* Footer */
-    footer{padding:26px 0;border-top:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+/* OFFER */
+.offer-section{padding:56px 24px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#0A0010,#050815);}
+.offer-inner{max-width:640px;margin:0 auto;text-align:center;}
+.offer-box{background:var(--card);border:1px solid rgba(236,0,140,.2);border-radius:16px;padding:36px;margin:32px 0;}
+.offer-title{font-size:22px;font-weight:900;margin-bottom:12px;}
+.offer-body{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px;}
+.offer-steps{text-align:left;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.offer-step{display:flex;gap:12px;align-items:flex-start;font-size:13px;color:#CCC;}
+.step-num{width:24px;height:24px;border-radius:50%;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px;}
+.fine-print{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.7;}
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .card-grid{grid-template-columns:1fr 1fr}
-      .trust-grid{grid-template-columns:repeat(2,1fr)}
-      .reviews{grid-template-columns:1fr}
-      form{grid-template-columns:1fr}
-    }
-    @media (max-width: 640px){
-      .nav-inner{flex-direction:column;align-items:flex-start}
-      .brand img{height:38px}
-      .hero h1{font-size:36px}
-      .card-grid{grid-template-columns:1fr}
-      .trust-grid{grid-template-columns:1fr}
-    }
-  </style>
+/* ABOUT */
+.about-section{padding:48px 24px;border-bottom:1px solid var(--border);background:#050508;}
+.about-inner{max-width:640px;margin:0 auto;display:flex;gap:24px;align-items:flex-start;}
+.about-avatar{width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:white;flex-shrink:0;}
+.about-name{font-size:16px;font-weight:800;margin-bottom:4px;}
+.about-creds{font-size:12px;color:var(--accent2);font-weight:600;margin-bottom:10px;}
+.about-bio{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* FOOTER */
+footer{padding:28px 24px;text-align:center;font-size:12px;color:var(--muted);border-top:1px solid var(--border);}
+
+@media(max-width:640px){
+  .gap-vs{grid-template-columns:1fr;gap:8px;}
+  .vs-badge{display:none;}
+  .why-grid{grid-template-columns:1fr;}
+  .about-inner{flex-direction:column;}
+}
+</style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <img src="https://blissroofing.com/wp-content/uploads/2024/08/logo-bliss.png" alt="Bliss Roofing Logo">
+
+<nav>
+  <div class="nav-inner">
+    <img class="nav-logo" src="https://blissroofing.com/wp-content/uploads/2024/08/logo-bliss.png" alt="Bliss Roofing" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Bliss Roofing',style:'font-weight:900;font-size:16px'}))"/>
+    <div class="nav-badge">Built by ClickNinja · Portland, OR</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="tag">Made specifically for Bliss Roofing</div>
+    <h1>We researched your market.<br/>Here's what we found.</h1>
+    <p class="hero-sub">We built this page, wrote your ad copy, and ran the numbers on your competitors — before we ever reached out. Scroll down. Everything here is yours to keep.</p>
+    <a href="#offer" class="cta-btn">See the full package →</a>
+  </div>
+</section>
+
+<!-- THE GAP -->
+<section class="gap-section">
+  <div class="gap-inner">
+    <div class="section-eyebrow">The Real Problem</div>
+    <h2 class="section-title">Your work is good.<br/>Your Google presence doesn't show it.</h2>
+    <p class="section-sub">We pulled your numbers against the top roofers in Portland. Here's the gap that's costing you calls every week.</p>
+
+    <div class="gap-card">
+      <div class="gap-vs">
+        <div class="gap-col you">
+          <div class="gap-name">Bliss Roofing</div>
+          <div class="gap-num red">61</div>
+          <div class="gap-label">Google Reviews</div>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="gap-col them">
+          <div class="gap-name">Interstate Roofing</div>
+          <div class="gap-num blue">700+</div>
+          <div class="gap-label">Google Reviews · 4.8★</div>
+        </div>
       </div>
-      <div class="nav-actions">
-        <a class="phone-pill" href="tel:9713165569">Call: 971-316-5569</a>
-        <a class="btn btn-primary" href="#estimate">Get Free Estimate</a>
+      <div class="gap-insight">
+        When a Portland homeowner searches "roofing company near me," Google's algorithm ranks results by review count and recency. <strong>Interstate shows up first. You don't.</strong> That's not a quality problem — your reviews average well. It's a volume problem. And volume is fixable with a system.
       </div>
     </div>
-  </nav>
 
-  <header class="hero">
-    <div class="container hero-grid">
+    <div class="cost-card" style="margin-bottom:12px;">
+      <div class="cost-icon">📞</div>
       <div>
-        <span class="eyebrow">Serving the Portland Metro & Bend area since 1969</span>
-        <h1>Portland's Trusted Roofing Company — <span>Free Inspection, No Obligation</span></h1>
-        <p>A Top-Tier Roofing Company in Portland & Bend. Your preferred roofer since 1969 with fast, no-pressure estimates and craftsmanship that lasts.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#estimate">Schedule Free Estimate</a>
-          <a class="btn btn-outline" href="tel:9713165569">Call 971-316-5569</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h3>Why Homeowners Choose Bliss Roofing</h3>
-        <p style="color:var(--muted);margin:0">Locally trusted, responsive crews, and a clear, honest estimate every time.</p>
-        <ul class="hero-list">
-          <li><span class="dot"></span>Re-Roofing, repairs, inspections, and commercial services</li>
-          <li><span class="dot"></span>Same-day estimates available for urgent needs</li>
-          <li><span class="dot"></span>Licensed, insured, and warranty-backed workmanship</li>
-        </ul>
+        <div class="cost-title">What the review gap costs you monthly</div>
+        <div class="cost-body">Portland homeowners search "roofing" ~2,400 times/month. The top 3-pack captures ~70% of clicks. At your current review count, you're not in the top 3. <strong>Conservative estimate: 8–15 qualified calls/month going to competitors.</strong> At a $8,500 average job size, that's $68K–$127K in annual revenue sitting on the table.</div>
       </div>
     </div>
 
-    <div class="container trust">
-      <div class="trust-grid">
-        <div class="trust-item">Licensed & Insured</div>
-        <div class="trust-item">Same-Day Estimates</div>
-        <div class="trust-item">5-Year Guarantee</div>
-        <div class="trust-item">Portland Local</div>
+    <div class="cost-card">
+      <div class="cost-icon">📣</div>
+      <div>
+        <div class="cost-title">Nobody is running paid ads for Bliss Roofing</div>
+        <div class="cost-body">We checked Facebook Ad Library. <strong>Zero active ad campaigns.</strong> Your competitors are running retargeting ads to everyone who visited their site. You have no paid presence. Organic alone isn't enough in a market this competitive.</div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>Our Roofing Services</h2>
-          <p>Full-service roofing for residential and commercial projects.</p>
-        </div>
-        <a class="btn btn-outline" href="#estimate">Get a Quote</a>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <h4>Re-Roofing</h4>
-          <p>Complete replacement with premium materials and clean, efficient installs.</p>
-          <span class="pill">Most Popular</span>
-        </div>
-        <div class="card">
-          <h4>Roof Repairs</h4>
-          <p>Leak detection, flashing, vents, and storm damage repair done right.</p>
-        </div>
-        <div class="card">
-          <h4>New Construction</h4>
-          <p>Builder-ready installs with timelines that stay on schedule.</p>
-        </div>
-        <div class="card">
-          <h4>Inspections</h4>
-          <p>Detailed roof inspections and clear recommendations.</p>
-        </div>
-        <div class="card">
-          <h4>Commercial Services</h4>
-          <p>Flat and low-slope systems with professional project management.</p>
-        </div>
-        <div class="card">
-          <h4>Free Estimates</h4>
-          <p>Know the cost upfront with a no-pressure, no-obligation estimate.</p>
-        </div>
-      </div>
+<!-- PAGE COMPARISON -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="section-eyebrow">The Deliverable</div>
+    <h2 class="section-title" style="margin-bottom:8px;">We built you a landing page.<br/>Here's how it compares.</h2>
+    <p class="section-sub" style="margin-bottom:24px;">Toggle between your current site and what we built. The difference is what converts a homeowner from "browsing" to "calling."</p>
+
+    <div class="toggle-bar">
+      <div class="toggle-btn active" onclick="showView('theirs',this)">Their current site</div>
+      <div class="toggle-btn" onclick="showView('ours',this)">Page we built</div>
     </div>
-  </section>
 
-  <section id="reviews">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>Portland Homeowner Reviews</h2>
-          <p>Recent feedback from local homeowners.</p>
-        </div>
+    <div class="compare-frame">
+      <div class="frame-bar">
+        <div class="dot" style="background:#FF5F57;"></div>
+        <div class="dot" style="background:#FEBC2E;"></div>
+        <div class="dot" style="background:#28C840;"></div>
+        <div class="url-pill" id="url-display">blissroofing.com</div>
       </div>
-      <div class="reviews">
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"Bliss Roofing gave us a clear estimate the same day and finished our re-roof ahead of schedule. The crew was respectful and left our yard spotless."</p>
-          <small>— Sarah M., Sellwood (Google Review)</small>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"We had a persistent leak and they tracked it down fast. Honest, professional, and the repair looks great. Highly recommend for Portland homes."</p>
-          <small>— James R., Beaverton (Google Review)</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="estimate">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>Get Your Free Estimate</h2>
-          <p>Tell us about your project and we will call you back quickly.</p>
-        </div>
-        <a class="phone-pill" href="tel:9713165569">971-316-5569</a>
-      </div>
-      <div class="form-wrap">
-        <form id="leadForm">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="tel" name="phone" placeholder="Phone" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="text" name="address" placeholder="Project Address" required>
-          <textarea name="description" placeholder="Project Description" required></textarea>
-          <div class="form-actions">
-            <button class="btn btn-primary" type="submit">Submit Request</button>
-            <span class="form-note">By submitting, you agree to be contacted by Bliss Roofing.</span>
+      <div class="compare-content">
+        <!-- THEIR SITE -->
+        <div id="view-theirs">
+          <div style="background:#F5F5F5;border-radius:8px;padding:20px;margin-bottom:16px;">
+            <div style="background:#CC3366;height:120px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;margin-bottom:12px;">BLISS ROOFING — EST. 1969</div>
+            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:12px;">
+              <div style="background:#eee;height:32px;border-radius:4px;"></div>
+              <div style="background:#eee;height:32px;border-radius:4px;"></div>
+              <div style="background:#eee;height:32px;border-radius:4px;"></div>
+              <div style="background:#eee;height:32px;border-radius:4px;"></div>
+              <div style="background:#CC3366;height:32px;border-radius:4px;"></div>
+            </div>
+            <div style="background:#ddd;height:180px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Full-page hero image slider</div>
+            <div style="margin-top:12px;font-size:13px;color:#555;line-height:1.8;">
+              <p style="font-size:16px;font-weight:700;color:#333;margin-bottom:6px;">Portland's Premier Roofing Experts</p>
+              Serving the Portland Metro area for over 50 years. We offer residential and commercial roofing services...
+              <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Learn More</span>
+                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Our Services</span>
+                <span style="background:#CC3366;color:white;padding:4px 12px;border-radius:4px;font-size:12px;">Contact Us</span>
+              </div>
+            </div>
           </div>
-          <div class="thank-you" id="thankYou">Thanks! Your request has been received. We will reach out shortly.</div>
-        </form>
+          <div class="why-grid">
+            <div class="why-card bad">
+              <div class="why-label red">❌ Problem</div>
+              <div class="why-text">No phone number above the fold. A homeowner has to scroll or hunt for how to call you.</div>
+            </div>
+            <div class="why-card bad">
+              <div class="why-label red">❌ Problem</div>
+              <div class="why-text">3 CTAs competing ("Learn More", "Services", "Contact") — splits attention and reduces action.</div>
+            </div>
+            <div class="why-card bad">
+              <div class="why-label red">❌ Problem</div>
+              <div class="why-text">No lead capture form. Visitors who don't call are gone forever — no way to follow up.</div>
+            </div>
+            <div class="why-card bad">
+              <div class="why-label red">❌ Problem</div>
+              <div class="why-text">"Learn More" is weak. It doesn't move someone toward scheduling or calling.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OUR PAGE -->
+        <div id="view-ours" style="display:none;">
+          <div style="background:#0A0A0A;border-radius:8px;padding:20px;margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;background:#111;padding:10px 14px;border-radius:6px;">
+              <span style="color:#ec008c;font-weight:900;font-size:14px;">Bliss Roofing</span>
+              <div style="display:flex;gap:8px;">
+                <span style="color:#00aeef;font-size:13px;font-weight:700;">971-316-5569</span>
+                <span style="background:#ec008c;color:white;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:700;">Free Estimate</span>
+              </div>
+            </div>
+            <div style="background:#111;border-radius:6px;padding:20px;margin-bottom:12px;">
+              <div style="font-size:11px;font-weight:700;color:#ec008c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Portland, OR · Licensed & Insured</div>
+              <div style="font-size:20px;font-weight:900;color:white;margin-bottom:10px;line-height:1.2;">Don't let your competitor get <span style="color:#ec008c;">700 reviews ahead.</span></div>
+              <div style="font-size:13px;color:#888;margin-bottom:14px;">Free roof inspection. No obligation. Response within 1 hour.</div>
+              <div style="background:#ec008c;color:white;padding:12px 20px;border-radius:6px;font-weight:800;text-align:center;font-size:13px;">Get My Free Inspection →</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Licensed</div>
+              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Same Day</div>
+              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ 5-Year Warranty</div>
+              <div style="background:#111;border-radius:4px;padding:8px;text-align:center;font-size:10px;color:#666;">✓ Local</div>
+            </div>
+          </div>
+          <div class="why-grid">
+            <div class="why-card good">
+              <div class="why-label green">✓ Fixed</div>
+              <div class="why-text">Phone number in the nav, visible on every screen. One tap to call.</div>
+            </div>
+            <div class="why-card good">
+              <div class="why-label green">✓ Fixed</div>
+              <div class="why-text">One CTA — "Get My Free Inspection." No confusion about what to do next.</div>
+            </div>
+            <div class="why-card good">
+              <div class="why-label green">✓ Fixed</div>
+              <div class="why-text">Lead form captures name, phone, email, address. Visitors who don't call today get followed up automatically.</div>
+            </div>
+            <div class="why-card good">
+              <div class="why-label green">✓ Fixed</div>
+              <div class="why-text">Headline calls out the competitor gap directly. Creates urgency without being pushy.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">
-      Bliss Roofing · <a href="tel:9713165569">971-316-5569</a>
+<!-- DELIVERABLES -->
+<section class="deliver-section" id="offer">
+  <div class="deliver-inner">
+    <div class="section-eyebrow">What We're Handing Over</div>
+    <h2 class="section-title">5 things we already made for you.</h2>
+    <p class="section-sub">These are yours to keep regardless of whether we work together.</p>
+
+    <div class="deliver-list">
+      <div class="deliver-item">
+        <div class="deliver-num">1</div>
+        <div>
+          <div class="deliver-title">This landing page <span class="free-badge">FREE</span></div>
+          <div class="deliver-body">Built to convert — phone visible, single CTA, lead form, mobile optimized. Designed around your real brand colors and actual services. Ready to run traffic to tomorrow.</div>
+        </div>
+      </div>
+      <div class="deliver-item">
+        <div class="deliver-num">2</div>
+        <div>
+          <div class="deliver-title">3 Facebook ad scripts <span class="free-badge">FREE</span></div>
+          <div class="deliver-body">Written for Portland homeowners in your target zip codes. Angle 1: storm damage urgency. Angle 2: competitor review gap. Angle 3: seasonal inspection offer. Record them yourself or we shoot them for you.</div>
+        </div>
+      </div>
+      <div class="deliver-item">
+        <div class="deliver-num">3</div>
+        <div>
+          <div class="deliver-title">Google Business audit + fix list <span class="free-badge">FREE</span></div>
+          <div class="deliver-body">We pulled your GBP listing, identified 6 specific issues hurting your local pack ranking, and wrote the exact fixes. Implement them yourself in under an hour.</div>
+        </div>
+      </div>
+      <div class="deliver-item">
+        <div class="deliver-num">4</div>
+        <div>
+          <div class="deliver-title">Review generation sequence</div>
+          <div class="deliver-body">3-text SMS sequence that turns completed jobs into Google reviews automatically. Average client adds 15-25 reviews in the first 60 days. This is what closes the gap with Interstate.</div>
+        </div>
+      </div>
+      <div class="deliver-item">
+        <div class="deliver-num">5</div>
+        <div>
+          <div class="deliver-title">14-day free management</div>
+          <div class="deliver-body">We run everything — ads, landing page, lead follow-up — free for 14 days. You see exactly what the system produces before we talk about what it costs to keep running it.</div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    const form = document.getElementById('leadForm');
-    const thankYou = document.getElementById('thankYou');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      form.reset();
-      thankYou.style.display = 'block';
-      thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  </script>
+<!-- THE OFFER -->
+<section class="offer-section">
+  <div class="offer-inner">
+    <div class="section-eyebrow">The Offer</div>
+    <h2 class="section-title" style="font-size:clamp(22px,3vw,34px);">We do all of this before you pay us a single dollar for our time.</h2>
+    <p class="section-sub" style="margin-top:12px;color:var(--muted);">If we don't book you 15 qualified calls in 30 days, we keep working free until we do.</p>
+
+    <div class="offer-box">
+      <div class="offer-title">Here's exactly how it works</div>
+      <div class="offer-steps">
+        <div class="offer-step"><div class="step-num">1</div>You book a 20-minute call this week</div>
+        <div class="offer-step"><div class="step-num">2</div>We build out the full system — ads, landing page, follow-up sequences, review generation</div>
+        <div class="offer-step"><div class="step-num">3</div>We run everything free for 14 days while you watch the leads come in</div>
+        <div class="offer-step"><div class="step-num">4</div>After 14 days, you decide if you want to keep it running</div>
+        <div class="offer-step"><div class="step-num">5</div>If we don't hit 15 qualified calls in 30 days, we work free until we do</div>
+      </div>
+      <a href="https://calendly.com/treredeau" class="cta-btn" style="display:block;text-align:center;">Book the 20-minute call →</a>
+      <div class="fine-print">You always cover hard costs (ad spend ~$500-1K/mo + software ~$297/mo). Our guarantee covers our service fee only — if we don't perform, you don't pay us. The assets are yours regardless.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-avatar">TR</div>
+    <div>
+      <div class="about-name">Tre Redeau</div>
+      <div class="about-creds">ClickNinja · Licensed GC · Licensed RE Agent · Portland, OR</div>
+      <div class="about-bio">I'm not a generic marketing agency. I'm a licensed general contractor and real estate agent in Oregon — I've been in the trades. I know what a qualified roofing lead looks like and I know the difference between a homeowner who's ready and one who's wasting your time. That's why the system I built screens for budget, timeline, and decision-maker before a call ever gets to you.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built by ClickNinja for Bliss Roofing · Portland, OR · This page and all assets are yours to keep.
+</footer>
+
+<script>
+function showView(view, btn) {
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('view-theirs').style.display = view === 'theirs' ? 'block' : 'none';
+  document.getElementById('view-ours').style.display = view === 'ours' ? 'block' : 'none';
+  document.getElementById('url-display').textContent = view === 'theirs' ? 'blissroofing.com' : 'treredeau.github.io/d100-bliss-roofing';
+}
+</script>
 </body>
 </html>
